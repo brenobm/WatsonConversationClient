@@ -1,0 +1,129 @@
+﻿@{
+}
+<button onclick="javascript:falaAi()" name="falaai" value="Fala aí!">Fala aí</button>
+<button onclick="javascript:listar()" name="listar" value="listar!">Listar</button>
+<button onclick="javascript:token()" name="listar" value="listar!">Token</button>
+<button onclick="javascript:escutaAi()" name="listar" value="listar!">Escuta Aí!</button>
+<button onclick="#" id="escutaAiParou" value="listar!">Parou!</button>
+<div id="teste"></div>
+<div id="output">--</div>
+<script type="text/javascript">
+    //function falaAi() {
+    //    WatsonSpeech.TextToSpeech.synthesize(
+    //        {
+    //            'text': 'Fala aí brow!',
+    //            'token': 'dtmcm0HTt6ImmlWXKr%2F3PXd8%2Fofsn8usmy7w%2BPGhyX5V3WIaDWTIprRSRnTiCZUgaMdKUq3nPUEkxs1o3La9DkCLZ9K9V3F4%2Fc6SVjKrKMqs%2BAH4q0mGq1M9mG1cvRaFSyZB5gCDfjUbvina2Bh6ApzEm3qUJ0pZd%2BLBQ5r4UHbubI1XRSmA3wv7vTQ9Ovjn2r6N53%2FLWC%2Fiw2vunuV5kJI4ermyufxXzzqZoqcly9pXONEmU4pJVuA8LX%2BOWVxMn%2BW0mSSi5NqAyhvg4cP3wc8S%2F86rJ0NxLTOCrnqGNsdVsjiYugB%2Bh6fpjf31Vqj%2FYfJR0bbqp1F6H4qaMw%2FC%2BIyldD0wOah3Fv%2FUY3%2B6G%2B6y87xO3S%2BotyKN81S85VJXG9n10S8RDulvzxHFH9wYyf8%2BYmvBKksKw23NPwG2kSwBSIaI5uoszhEBnKUtuRHVzqaHpj%2Ftcg6j0KnIINBgv1moeE%2FI%2BcHExFdFaBu0Qd%2FiAkD7QkKp4hZ6%2B5Du8spBMfSzYz1VIeTUzGptXDaYYZo9a8ZyuFtEWXwWo0vmyqfTOxVMVLOWHtvYnvkB1dGhbCfU2E1xpo1p7rmrTKjx1GGrrLxO75WjC0esgorrqq5UqkARTB%2FoVzjnK9pMDZ6oo8HJb%2B3zpbsYbsVngW7ZOaAQdyOhLA84J6N1bLGXCyW%2FFtSb6SLXwlo1w%2BY6HyW90yXVe2nMF3bD3E35RTz9uFnaobsavXWJb7JpJejHjP9AWncYgeA6kC4HxQ3CZT3KuN7pe3TR5rHNnG9qsmO%2FI8LHiPXTjaiXYHISBBcA2FDFiv6Uj7D40Ny1YaBjRo4hYqaL%2F2zQQzYw%2Bjwy6suDbW2F0JqlfGOJgf9KqMcyaTWrWVpgYBDo%2BdG1GFR%2BkgSJngd7q8t0cjZ2Y3Tc8hHbpgoM6YdF7mtWGZLJhojR7ezjD113%2FAmfy0QbeB28iZ8yqmk0rAAldfNEp0kwb9sroXOKr8Y0ppEpkxKV4aVaGMY%3D',
+    //            'voice': 'pt-BR_IsabelaVoice'
+    //        });
+    //}
+
+    function listar() {
+        //WatsonSpeech.TextToSpeech.getVoices({ 'token': 'dtmcm0HTt6ImmlWXKr%2F3PXd8%2Fofsn8usmy7w%2BPGhyX5V3WIaDWTIprRSRnTiCZUgaMdKUq3nPUEkxs1o3La9DkCLZ9K9V3F4%2Fc6SVjKrKMqs%2BAH4q0mGq1M9mG1cvRaFSyZB5gCDfjUbvina2Bh6ApzEm3qUJ0pZd%2BLBQ5r4UHbubI1XRSmA3wv7vTQ9Ovjn2r6N53%2FLWC%2Fiw2vunuV5kJI4ermyufxXzzqZoqcly9pXONEmU4pJVuA8LX%2BOWVxMn%2BW0mSSi5NqAyhvg4cP3wc8S%2F86rJ0NxLTOCrnqGNsdVsjiYugB%2Bh6fpjf31Vqj%2FYfJR0bbqp1F6H4qaMw%2FC%2BIyldD0wOah3Fv%2FUY3%2B6G%2B6y87xO3S%2BotyKN81S85VJXG9n10S8RDulvzxHFH9wYyf8%2BYmvBKksKw23NPwG2kSwBSIaI5uoszhEBnKUtuRHVzqaHpj%2Ftcg6j0KnIINBgv1moeE%2FI%2BcHExFdFaBu0Qd%2FiAkD7QkKp4hZ6%2B5Du8spBMfSzYz1VIeTUzGptXDaYYZo9a8ZyuFtEWXwWo0vmyqfTOxVMVLOWHtvYnvkB1dGhbCfU2E1xpo1p7rmrTKjx1GGrrLxO75WjC0esgorrqq5UqkARTB%2FoVzjnK9pMDZ6oo8HJb%2B3zpbsYbsVngW7ZOaAQdyOhLA84J6N1bLGXCyW%2FFtSb6SLXwlo1w%2BY6HyW90yXVe2nMF3bD3E35RTz9uFnaobsavXWJb7JpJejHjP9AWncYgeA6kC4HxQ3CZT3KuN7pe3TR5rHNnG9qsmO%2FI8LHiPXTjaiXYHISBBcA2FDFiv6Uj7D40Ny1YaBjRo4hYqaL%2F2zQQzYw%2Bjwy6suDbW2F0JqlfGOJgf9KqMcyaTWrWVpgYBDo%2BdG1GFR%2BkgSJngd7q8t0cjZ2Y3Tc8hHbpgoM6YdF7mtWGZLJhojR7ezjD113%2FAmfy0QbeB28iZ8yqmk0rAAldfNEp0kwb9sroXOKr8Y0ppEpkxKV4aVaGMY%3D' }).then(
+        //    function (data)
+        //    {
+        //        printData(data);
+        //    }
+        //);
+        WatsonSpeech.SpeechToText.getModels(
+            {
+                token: 'bXOMeWj2yaCYJto%2FcEiC9vN6gWbBffOnCga966ySMcQoJjW0Hox%2FT%2B%2FI4BQRAbRt6IopcCHiF8%2BQuvZxisSAfu%2Fq%2FX4RwVXoVDuRp5kNl1QtsIOiYGfzJdscG3MuSC%2Bpvv%2FCEjk%2FS4pZLrSss9%2BmGYaJ%2FwSLxMxwVBtI588uTf0Wc%2BJ1cG12escKU1BlMYSNBr%2FoZr7yXOM4W%2BYNavoVtYdohcr%2BKNmkRkdfnszpKpbypECv4Mh9LAENbWwRsBQdC2NykBPuf620kcK5vGmkxbF1JsdBHVohZO6hDR9I6KnFjxJ4ercZiWPmIS6aQnTSEOKEmPTPqgSJvh5YN9tkH3QE39Pm8GLCbadq%2FRj35LeX%2BLw2GYrHt2X58u35Ah9IzZAl48hc38mxvfMHQcI2hlIIkJSG3FfLdIZx7eTJ9QjyM6estBWk4E5uBUklYrkAq8V0BfLTTAFprMME4l%2FsABXPmtmRoOGbpdWHsjC2ycnfZLvAi1yG%2FXY%2FiVTYO7BuSmVES3BKK0YbGzyVh2R7n%2B6kBV5c22eSmyEvFhyHCI4vNHFA4mmYpuMqFy0Aanx5qSZVnkzIOd5EqSLt5Uc32tw3hVuSbJI4hdWhEAiRopF9W048ZPSKbhAo9UaL0SRwiyUxgZMutpsgbNKdxCpwsFi4JkIhmeNWuCc%2BTW2749nTY58d6MTHKOF%2FZkeite5s2DXwOglOTxhYBm%2Fn5b%2BTw4roMEVzfKGGJ1jjAuPh3QGI%2BfJZ8NQm6xo9UGPyOoO8GC65Woan1mNKER5xBAhgnKwqGhViKGSGmUqg3KPHjFfDh9E%2BpbVJqXJ09j62PhNjmR944HKMbM161Dpbg%2F%2FjFIfo%2Frjn578lb8izOzB7AnQqlRTuWzpD%2Bz0hi%2FLWQeFWHI1Lm3tkn8gEQk4r4pv2hUlK82fV8BCN5W7%2FBoDB74UnMtEjex%2FP3gsznAZBY4wnAhKJvFuqhT7k5DpRPWiIYaOwpKCWSrq0LAxs4P7vMpk%3D'
+            }).then(
+            function (data)
+            {
+                printData2(data);
+            });
+    }
+
+
+    function printData2(data)
+    {
+        var texto = "";
+
+        for (var i = 0; i < data.length; i++){
+            texto += "Nome: " + data[i].name + " <br />";
+            texto += "Linguagem: " + data[i].language + " <br />";
+            texto += "Rate: " + data[i].rate + " <br />";
+            texto += "Url: " + data[i].url + " <br />";
+            texto += "Descrição: " + data[i].description + " <br />";
+            texto += " <br />";
+        }
+
+        document.getElementById("teste").innerHTML = texto;
+    }
+
+    //function printData(data)
+    //{
+    //    var texto = "";
+
+    //    for (var i = 0; i < data.length; i++){
+    //        texto += "Nome: " + data[i].name + " <br />";
+    //        texto += "Linguagem: " + data[i].language + " <br />";
+    //        texto += "Customizável: " + data[i].customizable + " <br />";
+    //        texto += "Sexo: " + data[i].gender + " <br />";
+    //        texto += "Url: " + data[i].url + " <br />";
+    //        texto += "Descrição: " + data[i].description + " <br />";
+    //        texto += " <br />";
+    //    }
+
+    //    document.getElementById("teste").innerHTML = texto;
+    //}
+
+    //function token()
+    //{
+    //    ApiTextToSpeechToken.sendRequest("Teste");
+
+    //}
+
+    function escutaAi()
+    {
+
+        var stream = WatsonSpeech.SpeechToText.recognizeMicrophone({
+            token: 'bXOMeWj2yaCYJto%2FcEiC9vN6gWbBffOnCga966ySMcQoJjW0Hox%2FT%2B%2FI4BQRAbRt6IopcCHiF8%2BQuvZxisSAfu%2Fq%2FX4RwVXoVDuRp5kNl1QtsIOiYGfzJdscG3MuSC%2Bpvv%2FCEjk%2FS4pZLrSss9%2BmGYaJ%2FwSLxMxwVBtI588uTf0Wc%2BJ1cG12escKU1BlMYSNBr%2FoZr7yXOM4W%2BYNavoVtYdohcr%2BKNmkRkdfnszpKpbypECv4Mh9LAENbWwRsBQdC2NykBPuf620kcK5vGmkxbF1JsdBHVohZO6hDR9I6KnFjxJ4ercZiWPmIS6aQnTSEOKEmPTPqgSJvh5YN9tkH3QE39Pm8GLCbadq%2FRj35LeX%2BLw2GYrHt2X58u35Ah9IzZAl48hc38mxvfMHQcI2hlIIkJSG3FfLdIZx7eTJ9QjyM6estBWk4E5uBUklYrkAq8V0BfLTTAFprMME4l%2FsABXPmtmRoOGbpdWHsjC2ycnfZLvAi1yG%2FXY%2FiVTYO7BuSmVES3BKK0YbGzyVh2R7n%2B6kBV5c22eSmyEvFhyHCI4vNHFA4mmYpuMqFy0Aanx5qSZVnkzIOd5EqSLt5Uc32tw3hVuSbJI4hdWhEAiRopF9W048ZPSKbhAo9UaL0SRwiyUxgZMutpsgbNKdxCpwsFi4JkIhmeNWuCc%2BTW2749nTY58d6MTHKOF%2FZkeite5s2DXwOglOTxhYBm%2Fn5b%2BTw4roMEVzfKGGJ1jjAuPh3QGI%2BfJZ8NQm6xo9UGPyOoO8GC65Woan1mNKER5xBAhgnKwqGhViKGSGmUqg3KPHjFfDh9E%2BpbVJqXJ09j62PhNjmR944HKMbM161Dpbg%2F%2FjFIfo%2Frjn578lb8izOzB7AnQqlRTuWzpD%2Bz0hi%2FLWQeFWHI1Lm3tkn8gEQk4r4pv2hUlK82fV8BCN5W7%2FBoDB74UnMtEjex%2FP3gsznAZBY4wnAhKJvFuqhT7k5DpRPWiIYaOwpKCWSrq0LAxs4P7vMpk%3D',
+            model: 'pt-BR_BroadbandModel',
+            outputElement: '#output',
+            //objectMode: true
+            //interim_results : false
+            //keepMicrophone: navigator.userAgent.indexOf('Firefox') > 0
+        });
+
+        //stream.setEncoding('utf8');
+
+        stream.on('error', function (err) {
+            console.log(err);
+            stream.stop();
+        });
+
+        stream.on('receive-json', function (msg) {
+            console.log(msg);
+            if (msg.state != 'listening') {
+                if (msg.results[0].final) {
+                    console.log('receive-json: ' + msg);
+                    stream.stop();
+                }
+            }
+        });
+
+        stream.on('open', function () {
+            console.log('Abriu');
+        });
+
+        stream.on('close', function (reasonCode, description) {
+            console.log('close ' + reasonCode + ' - ' + description);
+        });
+
+        stream.on('data', function (data) {
+            console.log('data ' + data);
+        });
+
+        stream.on('stop', function () {
+            console.log('stop');
+        });
+
+        document.querySelector('#escutaAiParou').onclick = function () {
+            stream.stop();
+        };
+        
+    }
+
+
+</script>

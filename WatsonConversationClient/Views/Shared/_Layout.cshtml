@@ -1,0 +1,24 @@
+﻿<html>
+<head>
+    <base href="/">
+    <title>Banco Montreal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:image" content="conversation.svg" />
+    <meta property="og:title" content="Conversation Chat Simple" />
+    <meta property="og:description" content="Prova de Conceito de ChatBot com IBM Watson" />
+    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="~/css/app.css">
+</head>
+<body>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2017 - Montreal Informática</p>
+        </footer>
+    </div>
+    <script src="~/js/watson-speech.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

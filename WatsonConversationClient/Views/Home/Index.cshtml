@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Chatbot";
+}
+<script type="text/javascript">
+    var urlMicOn = "@Url.Content("~/img/mic_on.png")";
+    var urlMicOff = "@Url.Content("~/img/mic_off.png")";
+</script>
+<div id="contentParent" class="responsive-columns-wrapper">
+    <div id="chat-column-holder" class="responsive-column content-column">
+        <div class="chat-column">
+            <div id="scrollingChat"></div>
+            <label for="textInput" class="inputOutline">
+                <input id="textInput" class="input"
+                       placeholder="Digite alguma coisa" type="text"
+                       onkeydown="ConversationPanel.inputKeyDown(event, this)" style="width:90%">
+                <img src="~/img/mic_on.png" id="mic" data-holder="on" style="display: inline-block; float: right;"/>
+            </label>
+        </div>
+    </div>
+    <div id="payload-column" class="fixed-column content-column" style="display:none">
+        <div id="payload-initial-message">
+            Type something to see the output
+        </div>
+        <div id="payload-request" class="payload"></div>
+        <div id="payload-response" class="payload"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    
+    var rootURL = '@Url.Content("~/")';
+
+</script>
+
+<script src="~/js/common.js"></script>
+<script src="~/js/api.js"></script>
+<script src="~/js/apiTextToSpeechToken.js"></script>
+<script src="~/js/apiSpeechToTextToken.js"></script>
+<script src="~/js/recording.js"></script>
+<script src="~/js/conversation.js"></script>
+<script src="~/js/payload.js"></script>
+<script src="~/js/global.js"></script>

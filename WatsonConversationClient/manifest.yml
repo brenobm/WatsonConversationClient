@@ -1,0 +1,4 @@
+﻿applications:
+ - name: WatsonConversationMontreal
+   memory: 256M
+   instances: 1
